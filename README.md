@@ -1,4 +1,4 @@
-#sample calculator
+# sample calculator
 
 ### info
 made by brent kyrjeh abenir
