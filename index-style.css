@@ -1,58 +1,67 @@
-/* imports the Montserrat font from the Google API server. */
+/* imports the font from the Google API server. */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-
-/* basically all element i guess... */
-*{
-    font-family: "Montserrat", arial;
-    box-sizing: border-box;
+body{
     margin: 0;
-    padding: 0;
-}
-
-.container{
-    width: 100%;
-    height: 100vh;
-    background-color: skyblue;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: hsl(0, 0%, 30%)
 }
 
-.calculator{
-    background-color: rgb(39, 39, 39);
-    padding: 20px;
-    border-radius: 10px;
-    
+#calculator{
+    font-family: "Montserrat", sans-serif;
+    background-color: hsl(0, 0%, 11%);
+    border-radius: 15px;
+    max-width: 500px;
+    overflow: hidden;
+    box-shadow: -5px 5px 10px black;
 }
 
-.calculator form input{
-    border: 0;
-    outline: 0;
-    width: 60px;
-    height: 60px;
-    border-radius: 10px;
-    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.3);
-    background: transparent;
-    font-size: 20px;
-    color: white;
-    cursor: pointer;
-    margin: 10px;
-}
-
-form .display{
-    display: flex;
-    justify-content: flex-end;
-    margin: 20px 0;
-}
-
-.calculator form .display input{
+#display{
+    width: 90%;
+    margin-right: 30px;
+    font-size: 6rem;
     text-align: right;
-    font: 50%;
-    box-shadow: none;
-    width: 100%;
+    border: none;
+    background-color: hsl(0, 0%, 11%);
+    color: white;
+}
+#keys{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 25px;
+}
+button{
+    width: 95px;
+    height: 95px;
+    border-radius: 50px;
+    border: none;
+    background-color: hsl(0, 0%, 25%);
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition-duration: .1s;
+}
+button:hover{
+    background-color: hsl(0, 0%, 40%);
+}
+button:active{
+    background-color: hsl(0, 0%, 11%);
+}
+.operator-btn{
+    background-color: hsl(35, 100%, 55%);
+}
+.operator-btn:hover{
+    background-color: hsl(35, 100%, 65%);
+}
+.operator-btn:active{
+    background-color: hsl(35, 100%, 75%);
 }
 
-#equal-btn{
-    width: 145px;
+.first-btn{
+    background-color: hsl(0, 0%, 40%);
 }
